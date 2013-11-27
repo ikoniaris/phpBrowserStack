@@ -1,8 +1,10 @@
 <?php
 require_once(__DIR__.'/phpBrowserStack.class.php');
 
-$browserStack = new phpBrowserStack('foo', 'bar');
+$username   = 'user56';
+$access_key = 'kUoC2qZFUQxi89teH5sm';
 
-print_r($browserStack);
+$browserStack = new phpBrowserStack($username, $access_key);
+print_r($browserStack->getBrowsers(TRUE, TRUE));
 
 ?>
