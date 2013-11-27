@@ -109,9 +109,9 @@ class BrowserStackREST
     {
         $baseURL = BrowserStackREST::$REST_API_URL . '/builds/' . $build_id;
 
-        if (!empty($session_id) && !empty($logs))
+        if ($session_id && $logs)
             return ($baseURL . '/sessions/' . $session_id . '/logs.json');
-        else if (!empty($session_id))
+        else if ($session_id)
             return ($baseURL . '/sessions/' . $session_id . '.json');
         else
             return ($baseURL . '/sessions.json');
