@@ -133,6 +133,9 @@ class BrowserStackREST
         return FALSE;
     }
 
+    /*
+     * This method is not used. Only left here in case somebody wants to use just the REST class independently.
+     */
     protected function makeRequest($url, $method = 'GET')
     {
         if (!function_exists('curl_init')) {
